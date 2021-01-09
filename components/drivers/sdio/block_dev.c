@@ -506,7 +506,11 @@ void rt_mmcsd_blk_remove(struct rt_mmcsd_card *card)
         	if (mounted_path)
         	{
                   dfs_unmount(mounted_path);
+<<<<<<< HEAD
                   LOG_D("unmount file system %s for device %s.\r\n", mounted_path, blk_dev->dev.parent.name);
+=======
+                  rt_kprintf("unmount file system %s for device %s.\r\n", mounted_path, blk_dev->dev.parent.name);
+>>>>>>> 074b51b9acf69a00b2da718a7fdda88e66494ead
         	}
             rt_sem_delete(blk_dev->part.lock);
             rt_device_unregister(&blk_dev->dev);
